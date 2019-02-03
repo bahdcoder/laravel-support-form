@@ -1,0 +1,54 @@
+{
+    "name": "bahdcoder/laravel-support-form",
+    "description": "A laravel package to rapidly add a support form to your website",
+    "keywords": [
+        "bahdcoder",
+        "laravel-support-form"
+    ],
+    "homepage": "https://github.com/bahdcoder/laravel-support-form",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kati Frantz",
+            "email": "bahdcoder@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bahdcoder\\LaravelSupportForm\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bahdcoder\\LaravelSupportForm\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bahdcoder\\LaravelSupportForm\\LaravelSupportFormServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSupportForm": "Bahdcoder\\LaravelSupportForm\\LaravelSupportFormFacade"
+            }
+        }
+    }
+}
